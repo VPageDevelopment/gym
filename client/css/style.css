@@ -2,6 +2,53 @@
 *    UI MENU   *
 ***************/
 
+div.ui.borderless.teal.inverted.labeled.icon.menu {
+    border-radius:0 !important;
+}
+
 a.item {
     min-width:9em !important;
+}
+
+.swiper-slide > img , .about > img{
+    width: inherit !important;
+    height: inherit!important;
+}
+
+#about , #event , #contact {
+    padding-top: 5em !important ;
+    padding-bottom: 5em !important ;
+}
+
+
+#event{
+    background-color: #00b5ad ! important ;
+
+}
+
+.button{
+    border-radius: 50px ! important;
+     border: 2px solid #fbbd08 ! important;
+}
+
+.button:hover{
+    background-color:#ffffff !important ;
+    border: 2px solid #fbbd08 ! important;
+
+}
+
+.hidden > i.right.arrow.icon {
+    color:#fbbd08 ! important ;
+}
+
+.teal-bg:hover{
+    background-color:#00b5ad ! important ;
+}
+
+div.button.border-none{
+     border: 1px #00b5ad ! important;
+}
+
+i.circular.yellow.users.icon:hover{
+    color:#00b5ad ! important ;
 }

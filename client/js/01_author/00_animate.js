@@ -10,9 +10,19 @@
         });
 
         // about us icon
-        $('.circular.yellow.users.icon').mouseover(function(){
+        $('.circular.teal.users.icon').mouseover(function(){
 
              $(this).transition('bounce');
+        });
+
+
+        // animate-contact
+
+        $('.animate-contact').mouseover(function(){
+
+             $(this)
+                .transition('swing left')
+                .transition('swing right');
         });
 
     });

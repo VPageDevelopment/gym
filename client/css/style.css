@@ -15,7 +15,7 @@ a.item {
     height: inherit!important;
 }
 
-#about , #event , #contact {
+#about , #event , #contact  {
     padding-top: 5em !important ;
     padding-bottom: 5em !important ;
 }
@@ -26,12 +26,12 @@ a.item {
 
 }
 
-.button{
+.button-rounder{
     border-radius: 50px ! important;
      border: 2px solid #fbbd08 ! important;
 }
 
-.button:hover{
+.button-rounder:hover{
     background-color:#ffffff !important ;
     border: 2px solid #fbbd08 ! important;
 
@@ -49,6 +49,7 @@ div.button.border-none{
      border: 1px #00b5ad ! important;
 }
 
-i.circular.yellow.users.icon:hover{
-    color:#00b5ad ! important ;
+i.circular.teal.users.icon:hover{
+    color:#fbbd08 ! important ;
 }
+

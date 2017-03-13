@@ -54,7 +54,7 @@
         Log-in to your account
       </div>
     </h2>
-    <form class="ui large form">
+    <form class="ui large form" action="auth-login.php" method="POST">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
@@ -68,7 +68,7 @@
             <input type="password" name="password" placeholder="Password">
           </div>
         </div>
-        <div class="ui fluid large teal submit button">Login</div>
+        <input type="submit" value="Login" class="ui fluid large teal submit button"/>
       </div>
 
       <div class="ui error message"></div>

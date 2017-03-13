@@ -19,6 +19,9 @@
     <!-- 02 reset some defult swiper css -->
     <link rel="stylesheet" href="client/css/00_lib/02_swiper/reset.swiper.css">
 
+    <!--03 animate css -->
+    <link rel="stylesheet" href="client/css/00_lib/03_animate/animate.css">
+
 
 
 
@@ -57,11 +60,11 @@
 
 
     <!-- About us -->
-    <section id="about">
+    <section id="about" >
         <div class="ui container">
             <div class="ui stackable two column grid  padded">
 
-                         <div class="column">
+                         <div class="column animated" id="aboutLeft">
                            <h2 class="ui center aligned teal icon header">
                                 <i class="circular teal  users icon"></i>
                                 About Us
@@ -81,7 +84,7 @@
                            
                         </div>
                             <!--./column about content -->
-                        <div class="column">
+                        <div class="column animated" id="aboutRight">
                                 <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="http://bit.ly/2ncWFyp"></div>
                         </div>
                              <!--./column about youtube video content -->
@@ -224,9 +227,14 @@
     <script src="client/js/00_lib/00_jquery/jquery-3.1.1.min.js"></script>
     <!-- 01 semantic -->
     <script src="client/js/00_lib/01_semantic/semantic.js"></script>
-    <!-- 02 swiper js -->
+    <!-- 02 swiper  -->
     <script src="client/js/00_lib/02_swiper/swiper.min.js"></script>
-  
+
+    <!--03  01 scroll magic -->
+    <script src="client/js/00_lib/03_scrollMagic/ScrollMagic.js"></script>
+
+    <!--03  02 scroll magic debuger -->
+    <script src="client/js/00_lib/03_scrollMagic/debug.addIndicators.js"></script>
     
 
 
@@ -246,7 +254,9 @@
 
         $(function(){
             $('.ui.embed').embed();
-        });
+
+            $('.openSidebar').sidebar('toggle');
+                 });
     </script>
 
 

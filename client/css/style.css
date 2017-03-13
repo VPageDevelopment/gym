@@ -20,6 +20,18 @@ a.item {
     padding-bottom: 5em !important ;
 }
 
+.about {
+    opacity:0;
+    transform:translateY(50px);
+    transform: all 1s ease-out;
+}
+
+.about.fade-in {
+    opacity:1;
+    transform:translateY(0);
+}
+
+
 
 #event{
     background-color: #00b5ad ! important ;

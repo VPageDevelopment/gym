@@ -15,7 +15,7 @@ a.item {
     height: inherit!important;
 }
 
-#about , #event , #contact  {
+#about , #event , #contact  , #viewEvents {
     padding-top: 5em !important ;
     padding-bottom: 5em !important ;
 }
@@ -64,4 +64,15 @@ div.button.border-none{
 i.circular.teal.users.icon:hover{
     color:#fbbd08 ! important ;
 }
+
+
+#viewEvents {
+   background-color: #f1f1f1;
+    margin-top:68px ! important;
+}
+
+i.right.arrow.icon.new-event{
+    color:#ffffff !important;
+}
+
 

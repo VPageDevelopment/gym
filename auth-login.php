@@ -18,7 +18,7 @@
 
                  echo '<script>
                              alert("Login Successfully ..."); 
-                             window.location.assign("admin/home.php");
+                             window.location.assign("admin/view_event.php");
                       </script>';
             } else {
                 echo '<script>

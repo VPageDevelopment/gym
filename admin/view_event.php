@@ -130,7 +130,7 @@
                             <td>  <?php echo $eventTitle; ?> </td>
                             <td>  <?php echo $eventDis; ?></td>
                             <td>
-                                <img src="<?php echo $upload_dir.'/'.$eventImage; ?>" style="width:30px ; height:30px;" alt="chennai gymnastic academy - <?php echo $eventTitle; ?>">
+                                <img src="<?php echo $upload_dir.'/'.$eventImage; ?>" style="width:70px ; height:70px;" alt="chennai gymnastic academy - <?php echo $eventTitle; ?>">
                             </td>
                             <td> <?php echo $eventVideo; ?></td>
 

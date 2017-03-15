@@ -10,21 +10,21 @@
                     <div class="column">
                             <h4 class="ui center aligned teal icon header">
                                 <i class=" animate-contact circular teal  call icon"></i>
-                                    +919876543210
+                                    +919551937799
                            </h4>
                     </div>
                         <!--./ column 1 -->
                      <div class="column">
                             <h4 class="ui center aligned teal icon header">
                                 <i class=" animate-contact circular teal  map signs icon"></i>
-                                 No: 123 , Main street,<br> Chennai. Tamil Nadu.
+                                 No: 124 ,2n Floor, Registrar Office Complex ,<br>Arcot Road. Chennai-600092
                            </4>
                     </div>
                         <!--./ column 2 -->
                     <div class="column ">
                             <h4 class="ui center aligned teal icon header">
                                 <i class=" animate-contact circular teal open envelope icon"></i>
-                                info@chennaigymnasticsacademy.com
+                                chennaigymnasticsacademy@gmail.com
                            </h4>
                     </div>
                      

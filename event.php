@@ -40,7 +40,7 @@
     <section id="event">
      <div class="ui container">
           <div class="ui grid">
-            <h1 class="ui row centered grid ">Our Events</h1>
+            <h1 class="ui row centered grid ">Our Gallery</h1>
             <p class="ui row  centered grid ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias exercitationem laboriosam dolore nisi repudiandae neque, consectetur. Ipsum, corrupti possimus a praesentium minus suscipit.</p>
          </div> 
 

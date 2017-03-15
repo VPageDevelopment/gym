@@ -6,13 +6,31 @@
 
     $upload_dir = 'uploads/';
 
+    if(isset($_GET['id'])){
+
+        $id = $_GET['id'];
+        $sql = "select * from event where id=".$id.";";
+
+        $result = mysqli_query($con , $sql);
+        if(mysqli_num_rows($result) > 0){
+
+            $row = mysqli_fetch_assoc($result);
+            
+
+        }else{
+
+            $errMsg = 'Could not find the record';
+
+        }
+
+    }
   
    
 
 
     // logic for save data from the goes here ....
 
-        if(isset($_POST['saveEvent'])){
+        if(isset($_POST['updateEvent'])){
 
             $title = mysqlI_real_escape_string($con , $_POST['title']);
             $description = mysqlI_real_escape_string($con , $_POST['description']);
@@ -32,11 +50,12 @@
                 $errMsg = 'Please enter title';
             }elseif(empty($description)){
                 $errMsg = 'Please enter description';
-            }elseif(empty($imageName)){
-                $errMsg = 'Please upload the images';
             }elseif(empty($video)){
                 $errMsg = 'Please enter the video url';
-            }else{
+            }
+            
+            // update the image ... 
+            if($imageName){
 
                 // get image extension
                 $imageExt = strtolower(pathinfo($imageName , PATHINFO_EXTENSION));
@@ -52,7 +71,10 @@
                 if(in_array($imageExt , $validExt)){
                         // check the image size must be less then 5MB.. 
                         if($imageSize < 5000000){
-                            move_uploaded_file($imageTmp , $upload_dir.$userPic);
+                                // delete old image ...
+                                unlink($upload_dir.$row['image']);
+
+                                move_uploaded_file($imageTmp , $upload_dir.$userPic);
                         }else{
                             $errMsg = "Image size is too large";
                         }
@@ -63,21 +85,22 @@
 
                
                 
-            } // if > else [empty]
+            } else{
+                // if user happy with the old image .. 
+                $userPic = $row['image'];
+            }
 
 
             // if no error is ocurrs ... 
 
             if(!isset($errMsg)){
-                $sql = "insert into 
-                            event(`title`, `description` , `image` , `video` ,`createdAT`)
-                            values('$title', '$description' , '$userPic' , '$video', NOW() )";
+                $sql = "update event set `title`='$title' , `description`='$description' , `image`='$userPic', `video`='$video' , `createdAt` = NOW() where id='$id'";
 
                 $result = mysqli_query($con , $sql);
 
                 if($result){
-                    $successMsg = 'New record created successfully - Redirecting...';
-                    header('refresh:3; view_event.php');
+                    $successMsg = 'Record updated successfully - Redirecting...';
+                    header('refresh:2; view_event.php');
                 }else{
                     $errMsg = ' Error'.mysqli_error($con);
                 }
@@ -131,8 +154,8 @@
             <!-- ./ui animated teal button -->
 
             <div class="ui divider"></div>
-            <!-- ./ui divider -->
-            
+            <!-- ./ ui divider -->
+
             <?php include('php_includes/status_message.php') ;?>
             <!-- ./status message component -->
 
@@ -140,47 +163,41 @@
             <!--./ui divider-->
             <form action="" class="ui form" method="post" enctype="multipart/form-data">
                 <div class="field">
-                    <lable>Title</lable>
-                    <input type="text" name="title" placeholder="Event Title">
-                </div>
-                    <br>
+                    <lable>Title</lable><br>
+                    <input type="text" name="title" value="<?php echo $row['title'];?>">
+                </div>  <br>
                     <!-- ./ field [title] -->
                 <div class="field">
-                    <lable>Description</lable>
-                    <textarea name="description" placeholder="Event description"></textarea>
-                </div>
-                    <br>
+                    <lable>Description</lable><br>
+                    <textarea name="description"><?php echo $row['description'];?></textarea>
+                </div> <br>
                     <!-- ./ field [description]-->
                 <div>
                     <p>Upload image</p>
-
-                    <img src="https://semantic-ui.com/images/wireframe/image.png" id="uploadImg" class="ui small image bordered" alt="" > <br>
-
-
+                    <img src="<?php echo $upload_dir.$row['image']?>" id="uploadImg"  class="ui small image bordered"alt="<?php echo $row['title'] ?>" > <br>
                     <label for="file" class="ui icon teal button">
                         <i class="file icon"></i>
                         Upload images</label>
-                    <input type="file" id="file" onchange="readURL(this)" name="myfile" style="display:none">
+                        
+                    <input type="file" id="file" name="myfile" onchange="readURL(this)" style="display:none">
                 </div> 
-                    <!-- ./ field [image] -->
-                    <br>
-                <div class="field ">
-                    
-                    <lable>Video</lable>
+                    <!-- ./ field [image] --> <br>
+
+                <div class="field">
+                    <lable>Video</lable><br>
                     <div class="ui labeled input">
                         <div class="ui teal label">
                             uri
                         </div>
-                        <input type="text" name="video" placeholder="mysite.com">
+                        <input type="text" name="video" value="<?php echo $row['video'];?>">
                     </div>
-                    
                 </div>
                     <!-- ./ field [video]-->
 
 
 
-                <button class="ui button teal" name="saveEvent" type="submit">
-                    <i class="icon send"></i> Save
+                <button class="ui button teal" name="updateEvent" type="submit">
+                    <i class="icon send"></i>Update
                 </button>
             </form>
             <!-- ./ form -->
@@ -203,7 +220,7 @@
     <!-- 01 semantic -->
     <script src="../client/js/00_lib/01_semantic/semantic.js"></script>
 
-    <!--nth author inline script  for close icon-->
+    <!--nth author inline script -->
 
     <script>
         $(function(){
@@ -218,8 +235,10 @@
         });
     </script>
 
+    
     <!-- author js for preview the uploaded image -->
     <script src="../client/js/01_author/02_preview.js"></script>
+
 
 </body>
 </html>

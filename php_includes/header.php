@@ -41,8 +41,8 @@
                     <?php if($first_part == 'event.php') {echo 'active'; } else {echo '';} ?>
                     "
                     >
-                        <i class="trophy icon"  ></i>
-                        Event
+                        <i class="image icon"  ></i>
+                        Gallery
                     </a>
                     <a href="contact.php" class="item animate
                     <?php if($first_part == 'contact.php') {echo 'active'; } else {echo '';} ?>

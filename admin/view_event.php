@@ -3,9 +3,40 @@
     require('../php_includes/connection.php');
     require('../php_includes/auth_user.php');
 
-    $upload_dir = '/uploads/images';
+    $upload_dir = 'uploads/';
 
 
+    if(isset($_GET['delete'])){
+
+        $id = $_GET['delete'];
+
+        // select the item to be deleted ..
+        $sql = "select image from event where id='$id'";
+        $result = mysqli_query($con , $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            $row = mysqli_fetch_assoc($result);
+
+            // to delete the image from the floder 
+            $image = $row['image'];
+            unlink($upload_dir.$image);
+
+            // to delete the record in db..
+
+            $sql = "delete from event where id='$id'";
+            if(mysqli_query($con , $sql)){
+
+                $successMsg = 'Item deleted successfully - redirecting ...' ;
+                header('refresh:1;view_event.php');
+            }else{
+                $errMsg='cant delete this item ';
+            }
+
+        }
+
+    }
+
+    
 
 ?>
 
@@ -57,9 +88,21 @@
             <!-- ./ui animated teal button -->
 
         <div class="ui divider"></div>
-            <!-- ./ ui divider -->
         
-            <?php $i = 1; ?>
+            <!-- ./ ui divider -->
+
+            
+            <?php include('php_includes/status_message.php') ;?>
+            <!-- ./status message component -->
+
+        
+            <?php
+            
+                $i = 1; 
+                $sql = "select * from event";
+                $result = mysqli_query($con , $sql);
+                
+             ?>
         <!-- view events [ui table] -->
             <table class="ui teal  sortable celled table">
                 <thead>
@@ -73,40 +116,40 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td> <?php echo $i ; ?> </td>
-                        <td> title </td>
-                        <td> description</td>
-                        <td>
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                             <img src="http://semantic-ui.com/images/logo.png" style="width:30px ; height:30px;" alt="">
-                        </td>
-                        <td> http://semantic-ui.com/images/logo.png <br>
-                            http://semantic-ui.com/images/logo.png
-                        </td>
+                    <?php 
+                        while($row=mysqli_fetch_array($result)){
+                            $id = $row['id'];
+                            $eventTitle = $row['title'];
+                            $eventDis = $row['description'];                                         
+                            $eventImage = $row['image'];                                    
+                            $eventVideo = $row['video'];                                                                                    
 
-                        <td>
-                            
-                               
+                    ?>
+                        <tr>
+                            <td> <?php echo $i ; ?> </td>
+                            <td>  <?php echo $eventTitle; ?> </td>
+                            <td>  <?php echo $eventDis; ?></td>
+                            <td>
+                                <img src="<?php echo $upload_dir.'/'.$eventImage; ?>" style="width:30px ; height:30px;" alt="chennai gymnastic academy - <?php echo $eventTitle; ?>">
+                            </td>
+                            <td> <?php echo $eventVideo; ?></td>
 
-                           <div class="ui buttons">
-                            <button class="ui teal button">Edit</button>
-                            <div class="or"></div>
-                            <button class="ui red button">Delete</button>
-                            </div>
-                                <!-- ./ ui labeled icon button [delete]-->
-                        </td>
-                    </tr>
+                            <td>
+                                
+                                <div class="ui buttons">
+                                    <a href="edit_event.php?id=<?php echo $id ;?>" class="ui teal button">Edit</a>
+                                    <div class="or"></div>
+                                    <a href="view_event.php?delete=<?php echo $id ;?>" class="ui red button">Delete</a>
+                                </div>
+                                    <!-- ./ ui labeled icon button [delete]-->
+                            </td>
+                        </tr>
+
+                    <?php
+                            $i++;
+                        }
+                    ?>
+
                 </tbody>
             </table>
                 <!-- ./ui table-->

@@ -1,5 +1,5 @@
 <?php 
-
+       
 ?>
 
 <!DOCTYPE html>
@@ -31,17 +31,60 @@
     <?php include('php_includes/header.php') ; ?>
 
 
-    
-
+    <!--importing jumbotron component -->
+    <?php include('php_includes/jumbotron.php'); ?>
 
   
     <!-- importing events component-->
     <?php include('php_includes/event_component.php') ?>
 
+    <section id="video-heading">
+        <div class="ui container">
+            <div class="ui row centered grid">
+                <h2 class="ui header teal"> Video </h2>
+            </div>
+        </div>
+    </section>
+        <!-- #/video-header -->
+
+         
+
+    <section id="video-content">
+        <div class="ui container">
+            <div class="ui stackable two column grid  padded">
+
+                <?php 
 
 
-       
-        <!-- include footer component  here .. -->
+                    $sql = "select * from event";
+                    $result = mysqli_query($con , $sql);
+
+                    while($row = mysqli_fetch_assoc($result)){
+                          $cardImage = $row['image'];
+                          $cardVideo = $row['video'];
+                ?>
+
+                     <div class="column" >
+                        <div class="ui embed" data-url="<?php echo $cardVideo ;?>" data-placeholder="admin/uploads/<?php echo $cardImage ;?>"></div>
+                    </div>
+                             <!--./column about youtube video content -->
+
+                <?php
+                    }
+                ?>
+
+                       
+
+                       
+          
+            </div> 
+        </div>
+        <!-- ./ ui container-->
+    </section>
+        <!--#/video-content section -->
+
+
+   <!-- include footer component  here .. -->
    <?php include('php_includes/footer.php');?>
 
 

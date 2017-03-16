@@ -85,7 +85,7 @@
                         </div>
                             <!--./column about content -->
                         <div class="column animated" id="aboutRight">
-                                <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="http://bit.ly/2ncWFyp"></div>
+                                <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="client/images/youtube-image-placeholder.png"></div>
                         </div>
                              <!--./column about youtube video content -->
 
@@ -121,17 +121,16 @@
     <!--03  01 scroll magic -->
     <script src="client/js/00_lib/03_scrollMagic/ScrollMagic.js"></script>
 
-    <!--03  02 scroll magic debuger -->
-    <script src="client/js/00_lib/03_scrollMagic/debug.addIndicators.js"></script>
+
     
-
-
-
 
     <!-- author config and custom script file -->
 
     <!-- author 00_header -->
     <script src="client/js/01_author/00_animate.js"></script>
+
+    <!-- author 00_header -->
+    <script src="client/js/01_author/00_animate_scroll.js"></script>
 
     <!-- author 01_swiper -->
     <script src="client/js/01_author/01_swiper.js"></script>

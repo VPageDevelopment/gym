@@ -136,16 +136,18 @@
             <?php include('php_includes/status_message.php') ;?>
             <!-- ./status message component -->
 
+        
+
 
             <!--./ui divider-->
             <form action="" class="ui form" method="post" enctype="multipart/form-data">
-                <div class="field">
+                <div class=" required field">
                     <lable>Title</lable>
                     <input type="text" name="title" placeholder="Event Title">
                 </div>
                     <br>
                     <!-- ./ field [title] -->
-                <div class="field">
+                <div class="required field">
                     <lable>Description</lable>
                     <textarea name="description" placeholder="Event description"></textarea>
                 </div>
@@ -164,7 +166,7 @@
                 </div> 
                     <!-- ./ field [image] -->
                     <br>
-                <div class="field ">
+                <div class=" required field ">
                     
                     <lable>Video</lable>
                     <div class="ui labeled input">

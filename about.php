@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="client/css/00_lib/00_normalize/normalize.css">
     <!-- 01 semantic css -->
     <link rel="stylesheet" href="client/css/00_lib/01_semantic/semantic.css">
+
+
+    <!--03 animate css -->
+    <link rel="stylesheet" href="client/css/00_lib/03_animate/animate.css">
     
 
 
@@ -27,12 +31,16 @@
     <!-- include the header content ... -->
     <?php include('php_includes/header.php') ; ?>
 
-    <!-- About us -->
-    <section id="about">
+
+    <!--importing jumbotron component -->
+    <?php include('php_includes/jumbotron.php'); ?>
+
+     <!-- About us -->
+    <section id="about" >
         <div class="ui container">
             <div class="ui stackable two column grid  padded">
 
-                         <div class="column">
+                         <div class="column animated" id="aboutLeft">
                            <h2 class="ui center aligned teal icon header">
                                 <i class="circular teal  users icon"></i>
                                 About Us
@@ -52,8 +60,8 @@
                            
                         </div>
                             <!--./column about content -->
-                        <div class="column">
-                                <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="http://bit.ly/2ncWFyp"></div>
+                        <div class="column animated" id="aboutRight">
+                                <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="client/images/youtube-image-placeholder.png"></div>
                         </div>
                              <!--./column about youtube video content -->
 
@@ -64,7 +72,7 @@
         <!-- ./ ui container-->
 
     </section>
-    <!-- #/ About -->
+        <!-- #/ About -->
 
  
        
@@ -78,21 +86,26 @@
     <script src="client/js/00_lib/00_jquery/jquery-3.1.1.min.js"></script>
     <!-- 01 semantic -->
     <script src="client/js/00_lib/01_semantic/semantic.js"></script>
-    <!-- 02 swiper js -->
-    <script src="client/js/00_lib/02_swiper/swiper.min.js"></script>
-  
+
+
+    <!--03  01 scroll magic -->
+    <script src="client/js/00_lib/03_scrollMagic/ScrollMagic.js"></script>
+
+
     
-
-
-
 
     <!-- author config and custom script file -->
 
     <!-- author 00_header -->
     <script src="client/js/01_author/00_animate.js"></script>
 
-    <!-- author 01_swiper -->
-    <script src="client/js/01_author/01_swiper.js"></script>
+    <!-- author 00_header -->
+    <script src="client/js/01_author/00_animate_scroll.js"></script>
+
+
+
+
+
 
 
     <!-- author 02_about -->

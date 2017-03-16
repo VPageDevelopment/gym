@@ -17,7 +17,7 @@
                 
                     <a href="index.php">
                         <div class="item">
-                            <img src="http://semantic-ui.com/images/logo.png" alt="sample logo"> 
+                            <img src="client/images/logo.png" class="ui tiny image" alt="sample logo"> 
                         </div>
                     </a>   
                 

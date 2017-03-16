@@ -15,7 +15,7 @@ a.item {
     height: inherit!important;
 }
 
-#about , #event , #contact  , #viewEvents {
+#about , #event , #contact  , #viewEvents , #aboutWrapper  {
     padding-top: 5em !important ;
     padding-bottom: 5em !important ;
 }
@@ -75,4 +75,42 @@ i.right.arrow.icon.new-event{
     color:#ffffff !important;
 }
 
+
+.gallery-grid{
+    padding:0px !important;
+}
+
+
+
+ .ui.four.cards.gallery-grid.centered  .ui.left.floated.image  {
+    margin-top:-4px !important ;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+.ui.left.floated.image .gallery-grid-image {
+    width:250px;
+    height:250px ;
+    max-height: 250px !important;
+  
+}
+
+
+#jumbotron , #video-heading{
+    width:100%;
+    height:120px !important;
+    padding:4em 1em 2em 1em;
+}
+
+#jumbotron{
+    background-color: #fbbd08;
+}
+
+.sub-header-fix{
+    margin-top:69px;
+}
+
+#video-heading{
+    background-color: #ffffff;
+}
 

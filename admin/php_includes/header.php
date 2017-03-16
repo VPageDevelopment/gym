@@ -7,16 +7,16 @@
                 
                     <a href="index.php">
                         <div class="item">
-                            <img src="http://semantic-ui.com/images/logo.png" alt="sample logo"> 
+                            <img src="../client/images/logo.png" class="ui tiny image" alt="sample logo"> 
                         </div>
                     </a>   
                 
 
                 <div class="right menu">
                    
-                        <a href="logout.php" class="ui simple dropdown item animate " style="padding:20px; !important">
+                        <a href="logout.php" class="ui simple dropdown item animate " >
                             
-                            <img class="ui avatar image" src="https://semantic-ui.com/images/avatar2/small/elyse.png">
+                            <img class="ui avatar image" src="../client/images/user-image.png">
                             <span>Admin</span>
                             
                             <i class="dropdown icon"></i>

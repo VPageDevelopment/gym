@@ -1,5 +1,5 @@
 <?php
-  $logo = "http://semantic-ui.com/images/logo.png" ;
+  $logo = "client/images/logo.png" ;
 
 ?>
 <!DOCTYPE html>
@@ -17,10 +17,7 @@
     <link rel="stylesheet" href="client/css/00_lib/00_normalize/normalize.css">
     <!-- 01 semantic css -->
     <link rel="stylesheet" href="client/css/00_lib/01_semantic/semantic.css">
-    <!-- 02 swiper css -->
-    <link rel="stylesheet" href="client/css/00_lib/02_swiper/swiper.min.css">
-    <!-- 02 reset some defult swiper css -->
-    <link rel="stylesheet" href="client/css/00_lib/02_swiper/reset.swiper.css">
+
 
 
 
@@ -30,7 +27,7 @@
 
     <style type="text/css">
         body {
-        background-color: #DADADA;
+        background-color:#1abc9c ;
         }
         body > .grid {
         height: 100%;
@@ -41,6 +38,9 @@
         .column {
         max-width: 450px;
         }
+        .content{
+          color:#ffffff;
+        }
     </style>
 
 </head>
@@ -49,9 +49,9 @@
 <div class="ui middle aligned center aligned grid">
   <div class="column">
     <h2 class="ui teal image header">
-      <img src="<?php echo $logo ;?>" class="image">
-      <div class="content">
-        Log-in to your account
+      <img src="<?php echo $logo ;?>" class="image"> <br>
+      <div class="content" >
+        Login
       </div>
     </h2>
     <form class="ui large form" action="auth-login.php" method="POST">
@@ -85,8 +85,7 @@
     <script src="client/js/00_lib/00_jquery/jquery-3.1.1.min.js"></script>
     <!-- 01 semantic -->
     <script src="client/js/00_lib/01_semantic/semantic.js"></script>
-    <!-- 02 swiper js -->
-    <script src="client/js/00_lib/02_swiper/swiper.min.js"></script>
+
     <script>
         $(document)
             .ready(function() {

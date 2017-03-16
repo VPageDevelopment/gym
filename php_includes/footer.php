@@ -5,7 +5,7 @@
             <div class="ui grid padded">
                 <div class="ui row centered grid" >
                    <a href="index.php">
-                        <img src="http://semantic-ui.com/images/logo.png"  style="border-radius: 50%;" alt="sample logo">
+                        <img src="client/images/logo.png"  class="ui small image "  alt="sample logo">
                     </a>
                 </div>
 

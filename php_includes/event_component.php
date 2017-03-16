@@ -80,7 +80,7 @@
 
                 <div class="ui grid">
                         <div class="ui row centered grid ">
-                            <a class="huge ui animated yellow  button button-rounder teal-bg" href="#" tabindex="0">
+                            <a class="huge ui animated yellow  button button-rounder teal-bg" href="event.php" tabindex="0">
                                 <div class="visible content">View More</div>
                                 <div class="hidden  content">
                                     <i class="right arrow icon"></i>

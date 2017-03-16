@@ -61,6 +61,7 @@
 
     <!-- About us -->
     <section id="about" >
+
         <div class="ui container">
             <div class="ui stackable two column grid  padded">
 
@@ -104,9 +105,15 @@
 
     <!-- importing the contact section -->
     <?php include('php_includes/contact_section.php') ?>
+
+
+    <!-- importing the contact section -->
+    <?php include('php_includes/news.php') ?>
+    
        
     <!-- include footer component  here .. -->
     <?php include('php_includes/footer.php');?>
+
 
 
     <!-- 00_lib script  -->
@@ -136,6 +143,10 @@
     <script src="client/js/01_author/01_swiper.js"></script>
 
 
+    <!-- author 01_swiper -->
+    <script src="client/js/01_author/03_sideNav.js"></script>
+
+
     <!-- author 02_about -->
     <script>
 
@@ -145,6 +156,9 @@
             $('.openSidebar').sidebar('toggle');
                  });
     </script>
+
+
+   
 
 
 </body>

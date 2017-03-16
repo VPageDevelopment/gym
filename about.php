@@ -74,9 +74,12 @@
     </section>
         <!-- #/ About -->
 
- 
+    
+
+    <!-- importing the contact section -->
+    <?php include('php_includes/news.php') ?>
        
-        <!-- include footer component  here .. -->
+    <!-- include footer component  here .. -->
    <?php include('php_includes/footer.php');?>
 
 
@@ -104,8 +107,8 @@
 
 
 
-
-
+    <!-- author 03 sideNav -->
+    <script src="client/js/01_author/03_sideNav.js"></script>
 
 
     <!-- author 02_about -->

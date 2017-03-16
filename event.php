@@ -83,6 +83,11 @@
     </section>
         <!--#/video-content section -->
 
+    
+
+    <!-- importing the contact section -->
+    <?php include('php_includes/news.php') ?>
+
 
    <!-- include footer component  here .. -->
    <?php include('php_includes/footer.php');?>
@@ -109,6 +114,10 @@
 
     <!-- author 01_swiper -->
     <script src="client/js/01_author/01_swiper.js"></script>
+
+
+    <!-- author 03 sideNav -->
+    <script src="client/js/01_author/03_sideNav.js"></script>
 
 
     <!-- author 02_about -->

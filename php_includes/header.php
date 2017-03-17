@@ -62,7 +62,10 @@
                                 
                                 <a class="toc item ">
                                        <i class="sidebar icon"></i>
+
+                                        <h4  style="margin-top:-2px ;" >Chennai Gymnastics Academy</h4>
                                 </a> 
+                                
                                
                                 <div class="right menu">
                                     <a href="index.php">
@@ -84,9 +87,15 @@
                 
                     <a href="index.php">
                         <div class="item">
-                            <img src="client/images/logo.png" class="ui tiny image" alt="sample logo"> 
+                            <img src="client/images/logo.png" class="ui tiny image" alt="sample logo">
+                            
                         </div>
                     </a>   
+                    <a href="index.php">
+                        <div class="item">
+                            <h4 style="margin-top:20px; font-weight:bold">Chennai Gymnastics Academy</h4>
+                        </div>
+                    </a>
                 
 
                 <div class="right menu">

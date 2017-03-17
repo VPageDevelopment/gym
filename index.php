@@ -59,7 +59,7 @@
         <!-- #/ carousel -->
 
 
-    <!-- About us -->
+    <!-- intro -->
     <section id="about" >
 
         <div class="ui container">
@@ -67,28 +67,28 @@
 
                          <div class="column animated" id="aboutLeft">
                            <h2 class="ui center aligned teal icon header">
-                                <i class="circular teal  users icon"></i>
-                                About Us
+                                <i class=" teal  pied piper alternate icon"></i>
+                                    Quick Intro to Gymnastics
                            </h2>
 
-                           <p class="">
-                               We offer a play-based emergent curriculum complete with low teacher to child ratios. Come see our environment and how it is designed to promote exploration, adventure and imaginative play. We believe that children are active participants in their own learning. That’s why we encourage them to ask questions and explore the world around them.
+                           <p>
+                               	Gymnastics is a sport, in which athletes (called gymnasts), perform acrobatic feats -- leaps, flips, turns, handstands, and more -- on a piece of apparatus, such as a balance beam, or with a piece of apparatus, like a rope or ribbon.
                            </p>
 
                           
-                                <a class="huge ui animated yellow button button-rounder" href="#" tabindex="0">
-                                    <div class="visible content">View More</div>
-                                    <div class="hidden content">
-                                        <i class="right arrow icon"></i>
-                                    </div>
-                                </a>
+                               
                            
                         </div>
-                            <!--./column about content -->
+                            <!--./column intro 1 content -->
                         <div class="column animated" id="aboutRight">
-                                <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="client/images/youtube-image-placeholder.png"></div>
+                                <div class="ui image">
+                                    <img src="client/images/intro0.png" alt="">
+                                </div>
                         </div>
-                             <!--./column about youtube video content -->
+                             <!--./column intro 1 content -->
+
+
+                        
 
                        
           
@@ -97,10 +97,89 @@
         <!-- ./ ui container-->
 
     </section>
-        <!-- #/ About -->
+        <!-- #/ intro -->
 
-    <!-- importing events component-->
-    <?php include('php_includes/event_component.php') ?>
+    <section id="intro2-heading">
+        <div class="ui container">
+            <div class="ui row centered grid">
+                <h2 class="ui header yellow">Type of Gymnastics</h2>
+            </div>
+        </div>
+    </section>
+        <!-- #/ intro2-heading -->
+
+    <section id="intro2">
+        <div class="ui container">
+                <div class="ui stackable two column grid  padded">
+
+              
+                        <div class="column animated">
+                                <div class="ui image">
+                                    <img src="client/images/intro2.png"  class="image" alt="">
+                                </div>
+                        </div>
+                             <!--./column intro 1 content -->
+                        
+                        <div class="column animated">
+                          
+
+                           <p>
+                               	Artistic gymnastics is the most commonly known type. Men and women both compete, on equipment like the uneven bars, parallel bars, and rings.
+                           </p>
+                           <p>
+                               Rhythmic gymnastics is probably the second best-known. In rhythmic, gymnasts all compete on the same floor mat, but use ribbons, ropes, hoops, and other equipment as part of their routines. 
+                           </p>
+                           <p>
+                               Trampoline was named an Olympic discipline of gymnastics for the 2000 Olympics. Gymnasts perform routines on a trampoline, completing flips on every single bounce.  
+                               Other types of gymnastics tumbling, acrobatic gymnastics, and group gymnastics.
+                           </p>
+                        </div>
+                            <!--./column intro 1 content -->
+            </div>
+        </div>
+    </section>
+        <!-- #/intro2 -->
+
+
+    <section id="intro3-heading">
+        <div class="ui container">
+            <div class="ui row centered grid">
+                <h2 class="ui header teal">Biggest Gymnastic Compitition</h2>
+            </div>
+        </div>
+    </section>
+        <!-- #/ intro2-heading -->
+
+      <section id="intro3">
+        <div class="ui container">
+                <div class="ui stackable two column grid  padded">
+                        <div class="column animated">
+                           <h2 class="ui center aligned icon header">
+                                <i class="circular    trophy icon"></i>
+                           </h2>
+
+                           <p>
+                                The Olympics is the ultimate gymnastics meet, and many young gymnasts set their sights on making the Olympic gymnastics team.
+                                World Championships are the second biggest competition in gymnastics, and in recent years have been held every non-Olympic year
+                                Other major competitions include the European Championships, the Asian Games, the Pan American Games, and World Cup meets.
+
+                           </p>
+                        </div>
+                        <!--./column intro 1 content -->
+                        <div class="column animated">
+                                <div class="ui image">
+                                    <img src="client/images/intro3.png" alt="">
+                                </div>
+                        </div>
+                        <!--./column intro 1 content -->
+            </div>
+        </div>
+    </section>
+        <!-- #/intro2 -->
+
+    
+
+
 
 
     <!-- importing the contact section -->
@@ -143,7 +222,7 @@
     <script src="client/js/01_author/01_swiper.js"></script>
 
 
-    <!-- author 01_swiper -->
+    <!-- author 03 sideNav -->
     <script src="client/js/01_author/03_sideNav.js"></script>
 
 

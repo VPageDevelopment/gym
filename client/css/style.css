@@ -15,7 +15,7 @@ a.item {
     height: inherit!important;
 }
 
-#about , #event , #contact  , #viewEvents , #aboutWrapper  {
+#about , #event , #contact  , #viewEvents , #aboutWrapper  , #intro2 , #intro3{
     padding-top: 5em !important ;
     padding-bottom: 5em !important ;
 }
@@ -96,7 +96,7 @@ i.right.arrow.icon.new-event{
 }
 
 
-#jumbotron , #video-heading {
+#jumbotron , #video-heading  , #intro2-heading , #intro3-heading {
     width:100%;
     height:120px !important;
     padding:4em 1em 2em 1em;
@@ -131,6 +131,27 @@ i.right.arrow.icon.new-event{
     display:none !important;
 }
 
+
+
+
+
+#intro2-heading{
+
+    background-color: #00b5ad;
+}
+
+
+ #intro3-heading{
+
+    background-color: #fbbd08;
+}
+
+#intro3{
+
+    background-color: #00b5ad;
+}
+
+
 /*media query*/
 
 @media only screen and (max-width: 768px) {
@@ -147,4 +168,11 @@ i.right.arrow.icon.new-event{
         background-color :#00b5ad ! important;
         padding:2px 10px;
     }
+
+    #carousel{
+        margin-top:73px !important;
+         
+    }
 }
+
+

@@ -47,16 +47,16 @@
                            </h2>
 
                            <p class="">
-                               We offer a play-based emergent curriculum complete with low teacher to child ratios. Come see our environment and how it is designed to promote exploration, adventure and imaginative play. We believe that children are active participants in their own learning. That’s why we encourage them to ask questions and explore the world around them.
+                               We offer a play-based emergent curriculum complete with low teacher to child ratios. Come see our environment and how it is designed to promote exploration, adventure and imaginative play. <span class="hidden-content"> We believe that children are active participants in their own learning. That’s why we encourage them to ask questions and explore the world around them.<span>
                            </p>
 
                           
-                                <a class="huge ui animated yellow button button-rounder" href="#" tabindex="0">
+                                <div class="huge ui animated yellow button button-rounder"  id="aboutViewMore"  tabindex="0">
                                     <div class="visible content">View More</div>
                                     <div class="hidden content">
                                         <i class="right arrow icon"></i>
                                     </div>
-                                </a>
+                                </div>
                            
                         </div>
                             <!--./column about content -->
@@ -116,6 +116,23 @@
 
         $(function(){
             $('.ui.embed').embed();
+
+        });
+
+
+
+    </script>
+
+    <script>
+
+        $(function(){
+            $('.hidden-content').hide();
+            $('#aboutViewMore').click(function(){
+
+                
+
+                $('.hidden-content').fadeToggle();
+            });
         });
     </script>
 
